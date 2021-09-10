@@ -14,7 +14,7 @@ const basicFetch = async (endpoint) => {
     return jsonDaRequisicao;
 }
 
-export default {
+const Tmdb = {
     pegarListaDeFilmes: async () => {
         return [
             {
@@ -81,3 +81,5 @@ export default {
         return info;
     }
 }
+
+export default Tmdb;

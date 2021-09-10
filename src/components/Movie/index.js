@@ -50,7 +50,7 @@ export const MovieRow = ({title, items}) => {
                 <div className="movieRow--list" style={{marginLeft: scrollX, width: larguraTotalDaLista}}>
                 {items.results.length > 0 && items.results.map((item, key) => (
                     <div key={key} className="movieRow--item">
-                        <img src={montarUrlImagem("w300") + item.poster_path} />
+                        <img alt= "Poster" src={montarUrlImagem("w300") + item.poster_path} />
                     </div>
                 ))}
                 </div>
