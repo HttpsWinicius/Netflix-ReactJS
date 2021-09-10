@@ -1,6 +1,7 @@
 import React from 'react';
 import './FeaturedMovie.css';
 import montarUrlImagem from '../../GlobalVariables/montarUrlImagem'
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 export const FeaturedMovie = ({item}) => {
 
