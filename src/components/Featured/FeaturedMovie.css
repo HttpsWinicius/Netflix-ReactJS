@@ -112,4 +112,34 @@
     color: var(--cinza);
 }
 
+@media (max-width: 760px) {
+
+    .featured {
+        height: 90vh;
+    }
+
+    .featured--name {
+        font-size: 40px;
+    }
+
+    .featured--info {
+        font-size: 16px;
+    }
+
+    .featured--description {
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+
+    #featured--button-assistir,
+    #featured--button-minha-lista {
+        font-size: 16px;
+    }
+
+    .featured--genres {
+        font-size: 14px;
+    }
+
+}
 
