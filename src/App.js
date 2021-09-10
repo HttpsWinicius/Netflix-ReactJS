@@ -9,6 +9,18 @@ export const App = () => {
 
   const [listaDeFilmes, setListaDeFilmes] = useState([]);
   const [filmeEmDestaque, setFilmeEmDestaque] = useState(null);
+  const [isBlackHeader, setIsBlackHeader] = useState(false);
+
+  
+  function scrollListener() {
+    if(window.scrollY > 10) {
+      setIsBlackHeader(true)
+    } else {
+      setIsBlackHeader(false);
+    }
+
+  }
+
 
   useEffect(() => {
     const carregarTudo = async () => {
@@ -26,9 +38,21 @@ export const App = () => {
     carregarTudo();
   }, [])
 
+
+  useEffect(() => {
+
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
     return (
       <div className="page">
-        <Header/>
+
+        <Header isBlack={isBlackHeader} />
+
+
         {filmeEmDestaque && 
         <FeaturedMovie item={filmeEmDestaque} />
         }
@@ -40,7 +64,12 @@ export const App = () => {
               items={item.items} />
         ))}
         </section>
-
+        
+        <footer>
+          Feito por Winicius <span role="img" aria-label="carinha-feliz">☺</span> <br/>
+          Direitos de imagem para Netflix <br/>
+          Dados pegos do site Themoviedb.org
+        </footer>
       </div>
     );
 
