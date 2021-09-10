@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieRow.css';
-import montarUrlImagem from '../GlobalVariables/montarUrlImagem'
+import montarUrlImagem from '../../GlobalVariables/montarUrlImagem'
 
 export const MovieRow = ({title, items}) => {
     return (

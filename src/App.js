@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Tmdb from './Tmdb'
-import MovieRow from './components/MovieRow';
+import MovieRow from './components/Movie';
 import './App.css';
-import FeaturedMovie from './components/FeaturedMovie';
-import Header from './components/Header'
+import FeaturedMovie from './components/Featured';
+import Header from './components/Header';
 
 export const App = () => {
 
